@@ -1,7 +1,7 @@
 操作步骤：
 1.安装Xposed虚拟机VirtualXposed
-目前医联app还是32位，使用32位安装包VirtualXposed_0.18.2.apk
-未来医联app升级到64位后或者如上安装包无法安装，参考https://vxposed.com/ 或者 https://github.com/android-hacker/VirtualXposed/releases
+目前app还是32位，使用32位安装包VirtualXposed_0.18.2.apk
+未来app升级到64位后或者如上安装包无法安装，参考https://vxposed.com/ 或者 https://github.com/android-hacker/VirtualXposed/releases
 
 2. 基于Xposed库开发自定义模块
 检测时可以直接安装已经编译好的apk XPosed-Hook.apk
@@ -9,9 +9,9 @@ github demo地址 https://github.com/DeMonDemoSpace/XposedHook
 
 3.打开VirtualXposed，弹出打赏等提示框按返回键关闭即可。
 
-4.添加医联app和XPosed-Hook到VirtualXposed虚拟机
-打开VirtualXposed>中间menu图标>添加应用>选择医联app>点击安装按钮>弹出选择安装方式弹框>选择“VIRTUALXPOSED”>
-医联app安装，需要花费一段时间>安装成功
+4.添加app和XPosed-Hook到VirtualXposed虚拟机
+打开VirtualXposed>中间menu图标>添加应用>选择app>点击安装按钮>弹出选择安装方式弹框>选择“VIRTUALXPOSED”>
+app安装，需要花费一段时间>安装成功
 同样方法，添加XPosed-Hook demo到VirtualXposed
 
 5.开启Xposed-Hook模块
@@ -21,7 +21,7 @@ github demo地址 https://github.com/DeMonDemoSpace/XposedHook
 6.真正检测
 Xposed Instanller应用“日志”模块，先清理一下日志
 打开Xposed-Hook，切到后台，不要杀死应用
-打开医联app,注意停留一段时间让log写入文件中，返回Xposed Instanller应用“日志”模块，有时日志还是空，切换一下菜单便能看到日志，保存日志。
+打开app,注意停留一段时间让log写入文件中，返回Xposed Instanller应用“日志”模块，有时日志还是空，切换一下菜单便能看到日志，保存日志。
 
 7. 获取保存log adb pull sdcard/Android/data/de.robv.android.xposed.installer
 
@@ -29,4 +29,4 @@ Xposed Instanller应用“日志”模块，先清理一下日志
 
 9.注意事项
 1).使用VirtualXposed反复检测几遍后，出现Xposed-Hook长时间无法启动的问题，最后解决方案是删除VirtualXposed，重新从步骤1安装
-2).安装VirtualXposed后，运行非VirtualXposed框架内的医联app出现一些莫名其妙的问题，检测完后建议卸载VirtualXposed框架(未100%证实VirtualXposed引起的)。
+2).安装VirtualXposed后，运行非VirtualXposed框架内的app出现一些莫名其妙的问题，检测完后建议卸载VirtualXposed框架(未100%证实VirtualXposed引起的)。
